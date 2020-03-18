@@ -1,21 +1,22 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 function useFetch(url, options) {
   const [data, setData] = useState({})
   const [isLoading, setIsLoading] = useState(false);
 
-  function fetchData() {
-    console.log('refetch data');
-    // 1. fetch data
-    // 2. update data with new data
-    setData({ sinister: 'sinister' })
-  }
+  const fetchData = useCallback(
+    function() {
+      setIsLoading(true);
+      fetch(url)
+      .then(res => res.json())
+      .then(data => setData(data))
+      .then(setIsLoading(false))
+    },
+    [url]
+  )
 
-  useEffect(function() {
-    // 1. fetchData once on first render
-    fetchData();
-  }, [])
-  
+  useEffect(fetchData, [fetchData])
+
   return [data, isLoading, fetchData];
 }
 
