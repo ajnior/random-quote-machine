@@ -4,15 +4,19 @@ function useFetch(url, options) {
   const [data, setData] = useState({})
   const [isLoading, setIsLoading] = useState(false);
 
-  function refetch() {
+  function fetchData() {
     console.log('refetch data');
+    // 1. fetch data
+    // 2. update data with new data
+    setData({ sinister: 'sinister' })
   }
 
   useEffect(function() {
-    setData({ sinister: 'sinister' })
+    // 1. fetchData once on first render
+    fetchData();
   }, [])
   
-  return [data, isLoading, refetch];
+  return [data, isLoading, fetchData];
 }
 
 export { useFetch };
