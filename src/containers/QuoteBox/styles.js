@@ -8,6 +8,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Box = styled.section`
+  width: 50%;
   border: 1px solid black;
   border-radius: 5px;
+  padding: 2.5rem;
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
