@@ -18,12 +18,11 @@ function QuoteBox() {
           <h2 id="author">{`- ${author}`}</h2>
         </div>
         <div className="buttons-container">
-          <div className="buttons-container__social">
-            <TwitterButton textIntent={`"${content}" - ${author}`} />
-          </div>
-
           <div className="buttons-container__quote">
             <NewQuoteButton onClick={fetchData} label={"New quote"} />
+          </div>
+          <div className="buttons-container__social">
+            <TwitterButton textIntent={`"${content}" - ${author}`} />
           </div>
         </div>
       </Box>
