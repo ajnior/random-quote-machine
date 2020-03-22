@@ -36,7 +36,8 @@ export const Box = styled.section`
     color: #ffffff;
     font-size: 0.8rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: sans-serif;
+    font-weight: 400;
     border: none;
     border-radius: 2px;
     outline: none;
