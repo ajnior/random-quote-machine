@@ -12,6 +12,7 @@
     "react-fontawesome": "^1.7.1",
     "react-scripts": "3.4.0"
   },
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
