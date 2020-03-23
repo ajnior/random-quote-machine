@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 100vh;
   background: #d1f3fa;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", sans-serif;
 `;
 
 export const Box = styled.section`
@@ -29,18 +29,5 @@ export const Box = styled.section`
   }
   #author {
     font-size: 1.2rem;
-  }
-  #new-quote {
-    background: #66aebd;
-    padding: 14px 41px;
-    color: #ffffff;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-weight: 400;
-    border: none;
-    border-radius: 2px;
-    outline: none;
-    cursor: pointer;
   }
 `;

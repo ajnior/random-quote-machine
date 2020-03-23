@@ -1,10 +1,11 @@
 import React from "react";
+import { QuoteButton } from "./styles";
 
 function NewQuoteButton({ onClick, label }) {
   return (
-    <button id="new-quote" onClick={onClick}>
+    <QuoteButton id="new-quote" onClick={onClick}>
       {label}
-    </button>
+    </QuoteButton>
   );
 }
 
